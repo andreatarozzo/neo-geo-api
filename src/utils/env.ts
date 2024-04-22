@@ -6,7 +6,7 @@ dotenv.config();
 type EnvVariables = {
   PORT: number;
   DB_CONNECTION_STRING: string;
-  NODE_ENV: string;
+  NODE_ENV: 'development' | 'test' | 'production';
 };
 
 // Adding Schema Validation for env variables
