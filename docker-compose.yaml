@@ -26,6 +26,8 @@ services:
           - PORT=3000
           - DB_CONNECTION_STRING=postgres://postgres:postgrespsw@database:5432/businesses
           - NODE_ENV=development
+          - DB_HOST=database
+          - DB_PORT=5432
       depends_on:
           database:
             condition: service_healthy

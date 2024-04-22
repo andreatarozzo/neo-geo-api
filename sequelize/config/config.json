@@ -4,16 +4,12 @@
     "password": "postgrespsw",
     "port": "5432",
     "database": "businesses",
-    "host": "localhost",
+    "host": "database",
     "dialect": "postgres"
   },
   "test": {
-    "username": "postgres",
-    "password": "postgrespsw",
-    "port": "5432",
-    "database": "businesses",
-    "host": "database",
-    "dialect": "postgres"
+    "dialect": "sqlite",
+    "storage": ":memory:"
   },
   "production": {
     "username": "postgres",
