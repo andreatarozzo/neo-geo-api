@@ -1,5 +1,5 @@
 import { Column, Table, Model, DataType } from 'sequelize-typescript';
-import { DBTableName } from '../../types';
+import { BusinessType, DBTableName } from '../../types';
 
 const latitudeColumnName = 'latitude';
 const longitudeColumnName = 'longitude';
@@ -51,7 +51,7 @@ export class Businesses extends Model {
     type: DataType.STRING(50),
     allowNull: false,
   })
-  type!: 'Coffee' | 'Restaurant';
+  type!: BusinessType;
 }
 
 export default Businesses;

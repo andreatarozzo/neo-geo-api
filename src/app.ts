@@ -1,6 +1,8 @@
 import express from 'express';
 import dotenv from 'dotenv';
 import helmet from 'helmet';
+import { Route } from './utils';
+import { discoveryRoute } from './routes';
 
 dotenv.config();
 const app = express();
@@ -16,6 +18,8 @@ app.use(helmet());
 
 // Assuming that this service will not be directly expose but behind something like an nginx
 app.set('trust proxy', true);
+
+app.use(Route.Discovery, discoveryRoute);
 
 // Catch route for all those routes that are not defined
 app.use((_, res) => res.sendStatus(404));
