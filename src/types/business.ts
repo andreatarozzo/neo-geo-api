@@ -5,5 +5,5 @@ export enum BusinessType {
 
 export enum DistanceUnit {
   Km = 'km',
-  Miles = 'miles',
+  Miles = 'mi',
 }
