@@ -15,7 +15,7 @@ export const discoveryRoute = express.Router();
 
 discoveryRoute.get(
   DiscoveryRoute.Main, // -> <HOST>/discovery
-  checkSchema(GETvalidationSchema),
+  checkSchema(GETvalidationSchema), // <- validator middleware
   async (req: express.Request, res: express.Response) => {
     try {
       // Validating and sanitizing the query params input
@@ -29,7 +29,7 @@ discoveryRoute.get(
         // useful in scenarios where the client uses an i18n library
         // so the query param error code can be mapped to a i18n key
         // and be easily displayed in the target language.
-        // { "message": "BAD_REQUEST", "errors": [{ "fieldName": "lat", "error": "invalid_value" }] }
+        // example: { "message": "BAD_REQUEST", "errors": [{ "fieldName": "lat", "error": "invalid_value" }] }
         const response: BadRequestResponse = {
           message: `${ResponseCodeText.BadRequest}`,
           errors: paramsErrorsParser(paramsValidationErrors),

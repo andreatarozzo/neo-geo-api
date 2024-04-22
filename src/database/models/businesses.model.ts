@@ -39,6 +39,7 @@ export class Businesses extends Model {
     type: DataType.DECIMAL(9, 6),
     allowNull: false,
   })
+  // Same as above
   get longitude(): number {
     return parseFloat(`${this.getDataValue(longitudeColumnName)}`);
   }

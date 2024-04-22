@@ -10,7 +10,7 @@ type EnvVariables = {
 };
 
 // Adding Schema Validation for env variables
-// so in they don't have the correct shape and content type the app won't even start
+// so in case they don't have the correct shape and/or content type the app won't even start.
 const envSchema = z.object({
   PORT: z.coerce.number().gte(3000).lte(3000),
   DB_CONNECTION_STRING: z.string().min(1),

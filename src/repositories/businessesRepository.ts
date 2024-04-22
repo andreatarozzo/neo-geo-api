@@ -37,7 +37,7 @@ class Repository implements IBusinessRepository {
             // to query the whole DB every time to be able to calculate the distance which is highly inefficient.
             // With this approach we don't lock too much resources and we don't stress out the node event loop too much with blocking operations.
             //
-            // If for example we had a max radius radius within which we want to search our points we could easily
+            // If for example we had a max radius within which we want to search our points we could easily
             // calculate the boundaries (i.e. lat is >= X && lat is <= X - long is >= Y && is long <= Y) of the coordinates within
             // our max radius and query the database based on those boundaries.
             this.#sequelize.cast(
@@ -53,7 +53,7 @@ class Repository implements IBusinessRepository {
             distanceColumnName,
           ],
           // Adding also a "unit" property so the response is as specific as possible
-          // and the client doesn't need to keep track of what unit was requested initially requested.
+          // and the client doesn't need to keep track of what unit was initially requested.
           [
             this.#sequelize.literal(`'${params.unit || DistanceUnit.Km}'`),
             unitColumnName,
@@ -62,10 +62,10 @@ class Repository implements IBusinessRepository {
       },
       order: [[this.#sequelize.literal(distanceColumnName), 'ASC']],
 
-      // If somebody asks for 0 records they should get 0 records :D
+      // If somebody asks for 0 records they should get 0 records, at the end it's what they asked for :D
       ...(params.limit || params.limit === 0
         ? // Setting an upper boundary for the limit
-          // In a real life scenario we would not want the client to be able to query the whole db
+          // In a real life scenario we would not want the client to be able to query the whole DB
           // and ideally pagination will be implemented
           { limit: params.limit > 100 ? 100 : params.limit }
         : {}),
@@ -75,8 +75,10 @@ class Repository implements IBusinessRepository {
     });
     return data.map((business) =>
       // Conversion of the result object into a DTO
-      // which will strip all not expected properties present in the
-      // db query result
+      // which will strip out all properties that are not explicitly exposed in the DTO.
+      // This is a good thing when the data stored in the DB contains
+      // information that the client is not supposed to receive, for example,
+      // for security or performances reason.
       plainToInstance(BusinessDTO, business.dataValues, {
         excludeExtraneousValues: true,
         enableImplicitConversion: true,

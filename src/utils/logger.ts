@@ -17,7 +17,6 @@ class CustomLogger {
   }
 
   error(e: any, metadata?: any, allowInTest?: boolean) {
-    // Avoiding to pollute the logs with test logs
     if (env.NODE_ENV === 'test' && !allowInTest) return;
     this.#logger.error(JSON.stringify(e), metadata);
   }

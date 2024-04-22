@@ -2,9 +2,9 @@ import { Sequelize, SequelizeOptions } from 'sequelize-typescript';
 import { env } from '../utils';
 
 const sharedSequelizeOptions: SequelizeOptions = {
-  // wildcards as they are raining because ts compiles to js
+  // Wildcards as they are raining because ts compiles to js
   // so locally with yarn serve it will search for models with .ts extension
-  // while when the project is built the model will be with a .js extension
+  // while when the project is built the model will have a .js extension
   models: [__dirname + '/**/*.model.*'],
   retry: {
     max: 3,
