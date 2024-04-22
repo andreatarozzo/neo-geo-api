@@ -18,7 +18,7 @@ const app = express();
 app.use(helmet());
 app.use(loggingMiddleware);
 
-// Assuming that this service will not be directly expose but behind something like an nginx
+// Assuming that this service will not be directly expose but behind something like nginx
 app.set('trust proxy', true);
 
 app.use(Route.Discovery, discoveryRoute);
