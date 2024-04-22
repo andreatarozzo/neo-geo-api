@@ -1,0 +1,9 @@
+tests/
+.git/
+yarn-error.log
+node_modules
+.env
+docker-compose.yaml
+Dockerfile
+jest.config.js
+README.md

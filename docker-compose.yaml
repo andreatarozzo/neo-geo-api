@@ -1,0 +1,34 @@
+version: '3.9'
+
+services:
+    database:
+      # Special flavour of postgres with postgis already enabled
+      image: postgis/postgis:16-3.4-alpine
+      restart: unless-stopped
+      ports:
+        - 5432:5432
+      environment:
+        - POSTGRES_USER=postgres
+        - POSTGRES_PASSWORD=postgrespsw
+      volumes:
+        - pg_volume:/data/db
+      healthcheck:
+        test: ["CMD-SHELL", "pg_isready -U postgres"]
+        interval: 10s
+        timeout: 5s
+        retries: 5
+
+    node:
+      build: .
+      ports:
+          - 3000:3000
+      environment:
+          - PORT=3000
+          - DB_CONNECTION_STRING=postgres://postgres:postgrespsw@database:5432/businesses
+          - NODE_ENV=development
+      depends_on:
+          database:
+            condition: service_healthy
+
+volumes:
+  pg_volume: {}
