@@ -45,9 +45,7 @@ You can use the following command to spin one up.
 docker run -it -p 5432:5432 -e POSTGRES_PASSWORD=postgrespsw -e POSTGRES_USER=postgres -e POSTGRES_DB=businesses postgis/postgis:16-3.4-alpine
 ```
 
-Postgres also will need to have the migrations executed and the seeding done.<br>
-
-To do so you can do the following:
+After the postgres database is running there are some more steps to complete.<br>
 
 - Open the file `sequelize/config/config.json` and depending on the `NODE_ENV` variable set in your `.env` file modify the portion of the config associated to it by changing the value of the `host` property from `database` ( this is the host used while the project is running with docker-compose ) to `localhost`.
 
