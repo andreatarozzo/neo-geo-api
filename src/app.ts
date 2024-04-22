@@ -11,7 +11,7 @@ const app = express();
 // helmet middleware for basic security
 // For example, removes the X-Powered-By header from the response
 // because it is good practice to avoid exposing the stack used by the service.
-// And also does other manipulation to the headers such as, for example:
+// And also does other manipulations/addition to the headers such as, for example it sets:
 // Content-Security-Policy -> to mitigate XSS
 // Strict-Transport-Security -> to enforce HTTPS over HTTP
 // ect ect...
