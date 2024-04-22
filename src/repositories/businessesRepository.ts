@@ -69,6 +69,7 @@ class Repository implements IBusinessRepository {
       ...(params.limit || params.limit === 0
         ? // Setting an upper boundary for the limit
           // In a real life scenario we would not want the client to be able to query the whole db
+          // and ideally pagination will be implemented
           { limit: params.limit > 100 ? 100 : params.limit }
         : {}),
 

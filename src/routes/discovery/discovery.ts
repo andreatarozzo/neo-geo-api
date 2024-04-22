@@ -2,7 +2,7 @@ import express from 'express';
 import { checkSchema, matchedData, validationResult } from 'express-validator';
 import { GETvalidationSchema } from './utils/requestValidationSchema';
 import { DiscoveryRoute, Logger, paramsErrorsParser } from '../../utils';
-import { BadRequestResponse, ResponseCodeText } from '../../types';
+import { BadRequestResponse, DiscoveryResponse, ResponseCodeText } from '../../types';
 import { BusinessDTO } from '../../database/DTOs';
 import { BusinessesRepository } from '../../repositories';
 
@@ -15,6 +15,7 @@ discoveryRoute.get(
     try {
       // Validating and sanitizing the query params input
       // All params not expected will be discarded
+      // Nice to have to avoid sneaky XSS attempts
       const paramsValidationErrors = validationResult(req);
       const params = matchedData(req, { includeOptionals: true });
 
@@ -42,7 +43,16 @@ discoveryRoute.get(
           unit: params.unit,
         });
 
-      return res.status(200).json(data);
+      // I prefer to always keep the type of the response body as an object
+      // so the response body type will always be consistent across different
+      // scenario, i.e. if we need to send down an error Vs we are returning the data.
+      // Plus, it is a structure easily extendable if needed.
+      const response: DiscoveryResponse = {
+        data,
+        total: data.length,
+      };
+
+      return res.status(200).json(response);
     } catch (e) {
       Logger.error(e);
       return res.status(500).json(ResponseCodeText.InternalServerError);
