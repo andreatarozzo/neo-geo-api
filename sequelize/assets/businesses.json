@@ -1,0 +1,245 @@
+{
+  "105": {
+    "Basic Fields": {
+      "Category": "Coffee",
+      "Chain Name": "The Coffee Hub"
+    },
+    "Locations": {
+      "105-001": {
+        "Address": "105 Grafton Street, Dublin 2",
+        "Lat": 53.341234,
+        "Long": -6.258765,
+        "Short Address": "Grafton St, D2"
+      }
+    }
+  },
+  "1836001": {
+    "Basic Fields": {
+      "Category": "Restaurant",
+      "Chain Name": "Taste of Dublin"
+    },
+    "Locations": {
+      "1836001-001": {
+        "Address": "1836 O'Connell Street, Dublin 1",
+        "Lat": 53.349876,
+        "Long": -6.266543,
+        "Name": "Taste of Dublin",
+        "Short Address": "O'Connell St, D1"
+      },
+      "1836001-002": {
+        "Address": "Lawyer's Bistro, 1836 O'Connell Street, Dublin 1",
+        "Lat": 53.351234,
+        "Long": -6.271098,
+        "Name": "Lawyer's Bistro",
+        "Short Address": "Lawyer's Bistro, O'Connell St, D1"
+      },
+      "1836001-003": {
+        "Address": "Atrium Cafe, 1836 O'Connell Street, Dublin 1",
+        "Lat": 53.353456,
+        "Long": -6.268765,
+        "Name": "Atrium Cafe",
+        "Short Address": "Atrium Cafe, O'Connell St, D1"
+      }
+    }
+  },
+  "225001": {
+    "Basic Fields": {
+      "Category": "Coffee",
+      "Chain Name": "Bean Haven"
+    },
+    "Locations": {
+      "225001-001": {
+        "Address": "17 Dame Street, Dublin 2",
+        "Lat": 53.344567,
+        "Long": -6.26789,
+        "Name": "Bean Haven",
+        "Short Address": "17 Dame St, D2"
+      }
+    }
+  },
+  "31401": {
+    "Basic Fields": {
+      "Category": "Restaurant",
+      "Chain Name": "Italiano's"
+    },
+    "Locations": {
+      "31401-001": {
+        "Address": "29 Temple Bar, Dublin 2",
+        "Lat": 53.345678,
+        "Long": -6.266543,
+        "Name": "Italiano's",
+        "Short Address": "29 Temple Bar, D2"
+      },
+      "31401-002": {
+        "Address": "12 Grafton Street, Dublin 2",
+        "Lat": 53.342345,
+        "Long": -6.26321,
+        "Name": "Italiano's",
+        "Short Address": "12 Grafton St, D2"
+      }
+    }
+  },
+  "4021201": {
+    "Basic Fields": {
+      "Category": "Coffee",
+      "Chain Name": "Brew Haven"
+    },
+    "Locations": {
+      "4021201-001": {
+        "Address": "45 O'Connell Street, Dublin 1",
+        "Lat": 53.348765,
+        "Long": -6.260987,
+        "Name": "Brew Haven"
+      }
+    }
+  },
+  "678": {
+    "Basic Fields": {
+      "Category": "Coffee",
+      "Chain Name": "Caffeine Fix"
+    },
+    "Locations": {
+      "678-001": {
+        "Address": "15 South Anne Street, Dublin 2",
+        "Lat": 53.34189,
+        "Long": -6.25957,
+        "Short Address": "South Anne St, D2"
+      }
+    }
+  },
+  "91011": {
+    "Basic Fields": {
+      "Category": "Restaurant",
+      "Chain Name": "Flavors of Ireland"
+    },
+    "Locations": {
+      "91011-001": {
+        "Address": "22 Temple Lane, Dublin 2",
+        "Lat": 53.344721,
+        "Long": -6.263105,
+        "Name": "Flavors of Ireland",
+        "Short Address": "22 Temple Lane, D2"
+      }
+    }
+  },
+  "121314": {
+    "Basic Fields": {
+      "Category": "Coffee",
+      "Chain Name": "Morning Brew"
+    },
+    "Locations": {
+      "121314-001": {
+        "Address": "10 Merrion Square, Dublin 2",
+        "Lat": 53.339562,
+        "Long": -6.252947,
+        "Name": "Morning Brew",
+        "Short Address": "10 Merrion Square, D2"
+      }
+    }
+  },
+  "151617": {
+    "Basic Fields": {
+      "Category": "Restaurant",
+      "Chain Name": "Savor the Flavors"
+    },
+    "Locations": {
+      "151617-001": {
+        "Address": "5 Grafton Street, Dublin 2",
+        "Lat": 53.34207,
+        "Long": -6.259158,
+        "Name": "Savor the Flavors",
+        "Short Address": "5 Grafton St, D2"
+      }
+    }
+  },
+  "181920": {
+    "Basic Fields": {
+      "Category": "Coffee",
+      "Chain Name": "Roast & Brew"
+    },
+    "Locations": {
+      "181920-001": {
+        "Address": "7 Dame Lane, Dublin 2",
+        "Lat": 53.34393,
+        "Long": -6.263779,
+        "Name": "Roast & Brew",
+        "Short Address": "7 Dame Ln, D2"
+      }
+    }
+  },
+  "212223": {
+    "Basic Fields": {
+      "Category": "Restaurant",
+      "Chain Name": "Harbor Bistro"
+    },
+    "Locations": {
+      "212223-001": {
+        "Address": "8 Quayside Avenue, Cork",
+        "Lat": 51.896321,
+        "Long": -8.476429,
+        "Name": "Harbor Bistro",
+        "Short Address": "8 Quayside Ave, Cork"
+      }
+    }
+  },
+  "242526": {
+    "Basic Fields": {
+      "Category": "Coffee",
+      "Chain Name": "Bean & Co."
+    },
+    "Locations": {
+      "242526-001": {
+        "Address": "16 Abbey Street, Galway",
+        "Lat": 53.272719,
+        "Long": -9.052415,
+        "Name": "Bean & Co.",
+        "Short Address": "16 Abbey St, Galway"
+      }
+    }
+  },
+  "272829": {
+    "Basic Fields": {
+      "Category": "Restaurant",
+      "Chain Name": "Taste of Galway"
+    },
+    "Locations": {
+      "272829-001": {
+        "Address": "25 Shop Street, Galway",
+        "Lat": 53.27286,
+        "Long": -9.052749,
+        "Name": "Taste of Galway",
+        "Short Address": "25 Shop St, Galway"
+      }
+    }
+  },
+  "303132": {
+    "Basic Fields": {
+      "Category": "Coffee",
+      "Chain Name": "Cuppa Delight"
+    },
+    "Locations": {
+      "303132-001": {
+        "Address": "12 Main Street, Limerick",
+        "Lat": 52.660965,
+        "Long": -8.625325,
+        "Name": "Cuppa Delight",
+        "Short Address": "12 Main St, Limerick"
+      }
+    }
+  },
+  "333435": {
+    "Basic Fields": {
+      "Category": "Restaurant",
+      "Chain Name": "Gourmet Haven"
+    },
+    "Locations": {
+      "333435-001": {
+        "Address": "18 Bridge Street, Limerick",
+        "Lat": 52.66139,
+        "Long": -8.624794,
+        "Name": "Gourmet Haven",
+        "Short Address": "18 Bridge St, Limerick"
+      }
+    }
+  }
+}
