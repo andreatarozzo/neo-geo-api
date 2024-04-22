@@ -3,6 +3,7 @@ import dotenv from 'dotenv';
 import helmet from 'helmet';
 import { Route } from './utils';
 import { discoveryRoute } from './routes';
+import { loggingMiddleware } from './middleware';
 
 dotenv.config();
 const app = express();
@@ -15,6 +16,7 @@ const app = express();
 // Strict-Transport-Security -> to enforce HTTPS over HTTP
 // ect ect...
 app.use(helmet());
+app.use(loggingMiddleware);
 
 // Assuming that this service will not be directly expose but behind something like an nginx
 app.set('trust proxy', true);
