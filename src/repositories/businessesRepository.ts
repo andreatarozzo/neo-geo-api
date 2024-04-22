@@ -2,10 +2,7 @@ import { DataType, ModelCtor, Sequelize } from 'sequelize-typescript';
 import { DBModelInstanceName, DistanceUnit } from '../types';
 import { BusinessDTO } from '../database/DTOs';
 import { sequelize } from '../database';
-import {
-  GetBusinessesSortedByDistanceParams,
-  IBusinessRepository,
-} from '../types/repository';
+import { GetBusinessesSortedByDistanceParams, IBusinessRepository } from '../types';
 import { distanceCalculationQueryString } from '../utils';
 import { plainToInstance } from 'class-transformer';
 

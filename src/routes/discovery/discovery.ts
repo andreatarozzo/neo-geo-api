@@ -1,10 +1,15 @@
 import express from 'express';
 import { checkSchema, matchedData, validationResult } from 'express-validator';
 import { GETvalidationSchema } from './utils/requestValidationSchema';
-import { DiscoveryRoute, Logger, paramsErrorsParser } from '../../utils';
-import { BadRequestResponse, DiscoveryResponse, ResponseCodeText } from '../../types';
+import {
+  BadRequestResponse,
+  DiscoveryResponse,
+  DiscoveryRoute,
+  ResponseCodeText,
+} from '../../types';
 import { BusinessDTO } from '../../database/DTOs';
 import { BusinessesRepository } from '../../repositories';
+import { Logger, paramsErrorsParser } from '../../utils';
 
 export const discoveryRoute = express.Router();
 
@@ -24,6 +29,7 @@ discoveryRoute.get(
         // useful in scenarios where the client uses an i18n library
         // so the query param error code can be mapped to a i18n key
         // and be easily displayed in the target language.
+        // { "message": "BAD_REQUEST", "errors": [{ "fieldName": "lat", "error": "invalid_value" }] }
         const response: BadRequestResponse = {
           message: `${ResponseCodeText.BadRequest}`,
           errors: paramsErrorsParser(paramsValidationErrors),
