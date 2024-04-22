@@ -45,7 +45,7 @@ class Repository implements IBusinessRepository {
                 distanceCalculationQueryString(
                   params.lat,
                   params.long,
-                  params.unit as DistanceUnit, // Added the possibility to specify the distance unit "km" / "miles"
+                  params.unit as DistanceUnit, // Added the possibility to specify the distance unit "km" / "mi"
                 ),
               ),
               DataType.FLOAT.key,
